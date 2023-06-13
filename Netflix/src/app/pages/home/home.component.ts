@@ -8,16 +8,18 @@ import { MovieApiServiceService } from 'src/app/service/movie-api-service.servic
 })
 export class HomeComponent implements OnInit {
   constructor(private service:MovieApiServiceService){}
+  bannerResult:any
 
   ngOnInit(): void {
-    alert("Hello")
+    console.log("Hello")
     this.bannerData();
   }
 
   //data banner
   bannerData(){
     this.service.bannerApiData().subscribe((result) =>{
-      console.log(result,'bannerresult#')
+      console.log(result,'bannerresult#');
+      this.bannerResult = result.results;
     })
   }
 
