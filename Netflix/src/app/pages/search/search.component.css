@@ -1,0 +1,23 @@
+button {
+  font-style: bold;
+  background-color: red;
+  color: white;
+}
+
+button:hover  /* button:hover dùng CSS cho phần tử <button> khi trỏ chuột lên (hover) phần tử đó. */
+{
+  background-color: red;
+  color: white;
+}
+
+img{
+  width: 100%;
+}
+
+h1{
+  color: white;
+}
+
+p{
+  color: white;
+}

@@ -1,0 +1,43 @@
+<div class="contain-fuild mt-5">
+
+  <!-- form search start -->
+  <form [formGroup]="searchForm" (ngSubmit)="submitForm()">
+    <!-- [formGroup]="searchForm": Đây là một thuộc tính dùng để gắn form với một FormGroup trong Angular.
+    Bằng cách gắn FormGroup vào form, Angular có thể theo dõi và xác thực các trường dữ liệu trong form  -->
+    <div class="row">
+      <div class="mb-3 col-lg-10">
+        <!-- Trong ví dụ trên, phần tử div sẽ có chiều rộng tương đương với 10/12 (83.33%) của container cha
+        khi hiển thị trên các màn hình có kích thước lớn (viewport có breakpoint tương ứng với lớp lg trong Bootstrap). -->
+        <input type="text" class="form-control" formControlName="movieName" placeholder="Search Movie Here ...">
+        <!-- Khi sử dụng formControlName="movieName", Angular sẽ tìm kiếm FormControl có tên
+        "movieName" trong FormGroup mà form đang gắn với nó  -->
+      </div>
+      <div class="col-lg-2">
+        <button class="btn btn-md">Search</button>
+        <!-- Lớp "btn" là một lớp CSS của Bootstrap. Lớp "btn" sẽ áp dụng CSS của Bootstrap.
+        Lớp "btn-md" là một lớp tùy chỉnh có thể được định nghĩa bởi người dùng  -->
+      </div>
+    </div>
+  </form>
+  <!-- form search end -->
+
+<!-- list movies result start -->
+  <div class="row mt-5">
+    <div class="col-lg-4" *ngFor="let film of searchResult">
+      <div class="row">
+        <div class="col-log-3 mt-4 mb-4" *ngIf="film.poster_path">
+          <img src="https://image.tmdb.org/t/p/original/{{ film.backdrop_path }}" routerLink="">
+        </div>
+        <div class="col-lg-9 mt-4 mb-4">
+          <h5>{{film.original_title}}</h5>
+          <p>{{film.overview}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<!-- list movies result end -->
+
+
+</div>

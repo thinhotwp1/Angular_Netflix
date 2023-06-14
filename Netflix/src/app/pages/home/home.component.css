@@ -1,9 +1,19 @@
-.carousel-inner{
-    height: 800px;
+.carousel-inner {
+  height: 100vh;
 }
-.carousel-inner .carousel-item img{
-    height: 800px;
-    object-fit: cover;
+
+.carousel-img-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+.carousel-img-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .carousel-caption h2{
@@ -20,8 +30,8 @@
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
-    /* Tóm lại, đoạn mã trên đặt các thuộc tính CSS để ẩn thanh cuộn dọc (overflow-y: hidden;) 
-    và hiển thị thanh cuộn ngang (overflow-x: scroll;) khi nội dung vượt quá kích thước của phần tử. 
+    /* Tóm lại, đoạn mã trên đặt các thuộc tính CSS để ẩn thanh cuộn dọc (overflow-y: hidden;)
+    và hiển thị thanh cuộn ngang (overflow-x: scroll;) khi nội dung vượt quá kích thước của phần tử.
     Điều này có thể được sử dụng để tạo một vùng hiển thị ngang có thể cuộn qua các phần tử hoặc hình ảnh ngang. */
 }
 
@@ -32,6 +42,7 @@
     box-sizing: content-box;
     transition: transform 450ms;
     margin-right: 7px;
+    margin-top:5px;
 }
 
 .rowing:hover{
