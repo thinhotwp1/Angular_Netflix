@@ -1,0 +1,48 @@
+.carousel-inner{
+    height: 800px;
+}
+.carousel-inner .carousel-item img{
+    height: 800px;
+    object-fit: cover;
+}
+
+.carousel-caption h2{
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.carousel-caption p{
+    color: white;
+}
+
+.rowposter{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    /* Tóm lại, đoạn mã trên đặt các thuộc tính CSS để ẩn thanh cuộn dọc (overflow-y: hidden;) 
+    và hiển thị thanh cuộn ngang (overflow-x: scroll;) khi nội dung vượt quá kích thước của phần tử. 
+    Điều này có thể được sử dụng để tạo một vùng hiển thị ngang có thể cuộn qua các phần tử hoặc hình ảnh ngang. */
+}
+
+.rowing{
+    max-height: 200px;
+    object-fit: contain;
+    width: 100%;
+    box-sizing: content-box;
+    transition: transform 450ms;
+    margin-right: 7px;
+}
+
+.rowing:hover{
+    transform: scale(1.09);
+    cursor: pointer;
+}
+
+.largeposter{
+    max-height: 300px;
+}
+
+/* .rowposter::-webkit-scrollbar{
+    display: none;
+} */
